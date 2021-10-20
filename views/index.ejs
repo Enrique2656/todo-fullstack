@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List!</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>To Do List!</h1>
+
+
+  <h3>List</h3>
+  <ul class="messages">
+  <% for(var i=0; i<list.length; i++) { %>
+    <li class="message">
+      <span><%= list[i].name %></span>
+      <span><i class="fa fa-check" aria-hidden="true"></i></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <h2>Add a To Do</h2>
+
+  <form action="/list" method="POST">
+    <input type="text" placeholder="What do you want to add to your list?" name="list">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
